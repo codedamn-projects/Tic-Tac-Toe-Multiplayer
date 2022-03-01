@@ -5,4 +5,5 @@ terminal-one: |
     yarn dev
 terminal-two: |
     cd server
+    yarn install
     yarn run nodemon 

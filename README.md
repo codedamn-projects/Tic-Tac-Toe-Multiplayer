@@ -1,5 +1,5 @@
-# Codedamn Projects - Ticket Master Clone
-![main image](https://raw.githubusercontent.com/codedamn-projects/ticket-master-clone/master/designs/Display.png)
+# Codedamn Projects - Tic Tac Toe (Multiplayer)
+![main image](https://raw.githubusercontent.com/codedamn-projects/Tic-Tac-Toe-Multiplayer/master/designs/cover-image.png)
 
 ## Hello developer!
 
@@ -14,59 +14,21 @@ You can use **any tools or technologies** you like to help you complete the chal
 
 ### Landing Page 
 The landing page will be shown in the `/` route. 
+This page should have the buttons to start and join a game. 
+The maximum number of players is 2. So there can only exist two connections to the  web socket (from player1 - server & player2 - server)
 
-### Sign Up
-
-The following should be implement at the `/Sign Up` route.
-
-![register page](https://raw.githubusercontent.com/codedamn-projects/ticket-master-clone/master/designs/Sign%20Up.png)
-
-### Sign In
-
-The following should be implement in the `/sign-in` route.
-
-![sign in](https://raw.githubusercontent.com/codedamn-projects/ticket-master-clone/master/designs/Sign%20In.png)
+![]()
 
 
-### Search Page
+### Start New
+On clicking `Start New` the user is prompted to enter his name. On submitting a random room code is generated. The player-1 has to share the room code with player-2 to join the game. 
 
-This page should be using the route `/search`.
 
-On searching for anything on the `/` page on getting successful data from the API. The user should be redirect to `/search` and the results from the search should be shown. 
 
-![search image](https://raw.githubusercontent.com/codedamn-projects/ticket-master-clone/master/designs/Search.png)
+### Join Game
+Player 2 is supposed to join the game by clicking on `Join Game` the player-2 is prompted to Enter his name along with the room code
 
-### Details
 
-All the details retrieved from the API can be shown in the drop down menu of the event. 
-
-![details](https://raw.githubusercontent.com/codedamn-projects/ticket-master-clone/master/designs/Details.png)
-## API Routes 
-
-You will be using [Ticket master API](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/) 
-
-Please generate an API Key for using the API
-
-#### [Event Search ](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#search-events-v2)
-
-For finding the events based on the given parameters in the `/` page.
-
-#### [Event Details](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#event-details-v2)
-
-Showing the event details on selecting an event.
-
-### MongoDB user document
-```
-{
-    _id: ObjectId(),
-    name: <string>,
-    email: <string>,
-    password: <string>,
-    timestamp: <date>,
-    countryOfResidence: <string>,
-    zipCode: <number>
-}
-```
 
 ### Ports 
 The Codedamn Playgrounds exposes only `1337` and `1338` ports on the internet. So you'll be using `localhost` for connecting to the mongodb instance as they are hosted on the same docker container. You can specify it as `localhost:27017` or simple write `localhost`. 
