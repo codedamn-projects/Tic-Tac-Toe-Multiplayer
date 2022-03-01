@@ -1,12 +1,21 @@
-const express = require("express");
-const cors = require("cors");
+const app = require("express")();
+const http = require("http").Server(app);
+const io = require("socket.io")(http);
 
-const app = express();
-app.use(express.json());
-app.use(cors());
-
-app.get("/", (req, res) => {
+app.get("/", function (req, res) {
   res.send("Howdy!");
 });
 
-app.listen(1338, () => console.log("Running on PORT 1338"));
+//Whenever someone connects this gets executed
+io.on("connection", function (socket) {
+  console.log("A user connected");
+
+  //Whenever someone disconnects this piece of code executed
+  socket.on("disconnect", function () {
+    console.log("A user disconnected");
+  });
+});
+
+http.listen(1338, function () {
+  console.log("listening on port :1338");
+});
