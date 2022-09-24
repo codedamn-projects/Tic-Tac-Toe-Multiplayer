@@ -1,4 +1,4 @@
-tabs: ["client/src/index.jsx", "README.md", "server/index.js"]
+tabs: ["client/src/index.jsx", "server/index.js"]
 terminal-one: |
   cd client
   yarn install
